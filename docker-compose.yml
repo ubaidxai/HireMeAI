@@ -9,30 +9,51 @@ services:
       - ./qdrant_storage:/qdrant/storage
     restart: unless-stopped
 
-  api:
-    build: .
-    container_name: hireme_api
-    command: uvicorn apps.api.main:app --host 0.0.0.0 --port 8000 --reload
-    ports:
-      - "8000:8000"
-    volumes:
-      - .:/app
-    env_file:
-      - .env
-    depends_on:
-      - qdrant
-    restart: unless-stopped
+  # api:
+  #   build: .
+  #   container_name: hireme_api
+  #   command: uvicorn apps.api.main:app --host 0.0.0.0 --port 8000 --reload
+  #   ports:
+  #     - "8000:8000"
+  #   volumes:
+  #     - .:/app
+  #   env_file:
+  #     - .env
+  #   depends_on:
+  #     - qdrant
+  #   restart: unless-stopped
 
-  webapp:
-    build: .
-    container_name: hireme_webapp
-    command: streamlit run apps/webapp/main.py --server.port 8501 --server.address 0.0.0.0
-    ports:
-      - "8501:8501"
-    volumes:
-      - .:/app
-    env_file:
-      - .env
-    depends_on:
-      - api
-    restart: unless-stopped
+  # webapp:
+  #   build: .
+  #   container_name: hireme_webapp
+  #   command: streamlit run apps/webapp/main.py --server.port 8501 --server.address 0.0.0.0
+  #   ports:
+  #     - "8501:8501"
+  #   volumes:
+  #     - .:/app
+  #   env_file:
+  #     - .env
+  #   depends_on:
+  #     - api
+  #   restart: unless-stopped
+
+  # info:
+  #   image: alpine
+  #   container_name: hireme_info
+  #   depends_on:
+  #     - qdrant
+  #     - api
+  #     - webapp
+  #   command: >
+  #     sh -c "
+  #       echo '' &&
+  #       echo '========================================' &&
+  #       echo '   HireMeAI is up and running' &&
+  #       echo '========================================' &&
+  #       echo '  Qdrant   → http://localhost:6333/dashboard' &&
+  #       echo '  FastAPI  → http://localhost:8000' &&
+  #       echo '  Streamlit→ http://localhost:8501' &&
+  #       echo '========================================' &&
+  #       echo ''
+  #     "
+  #   restart: "no"

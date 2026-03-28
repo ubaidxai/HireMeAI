@@ -1,3 +1,9 @@
+# API
+uvicorn apps.api.main:app --reload
+
+# Webapp
+uv run streamlit run apps/webapp/main.py
+
 # Setup:
 - open the wsl
 - in wsl:

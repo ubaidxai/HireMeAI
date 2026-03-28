@@ -1,4 +1,8 @@
-# apps/webapp/main.py
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parents[2]))
+
 import streamlit as st
 from src.agents.runner import run_agent
 
