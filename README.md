@@ -1,7 +1,16 @@
 # Setup:
-1. Download docker (windows):
-    - Docker desktop: `https://www.docker.com/products/docker-desktop/`
+- open the wsl
+- in wsl:
+    - install docker: 
+        - sudo apt update && sudo apt upgrade -y
+        - sudo apt install -y docker.io
+        - sudo service docker start
+        - docker --version
+        - sudo apt install -y docker-compose
+        - docker-compose --version
 
+        - docker run -d -p 6333:6333 qdrant/qdrant
+        - http://localhost:6333
 
 
 ## Recommended Build Phases
