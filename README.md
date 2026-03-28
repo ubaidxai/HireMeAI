@@ -9,9 +9,22 @@
         - sudo apt install -y docker-compose
         - docker-compose --version
 
-        - docker run -d -p 6333:6333 qdrant/qdrant
+        - docker run -d --name qdrant -p 6333:6333 -p 6334:6334 -v $(pwd)/qdrant_storage:/qdrant/storage qdrant/qdrant
         - http://localhost:6333
 
+    - docker compose up -d
+
+# Stop Qdrant
+docker stop qdrant
+
+# Start it again (data is persisted in qdrant_storage/)
+docker start qdrant
+
+# Check logs if something's wrong
+docker logs qdrant
+
+# Remove and start fresh (wipes all data)
+docker rm -f qdrant
 
 ## Recommended Build Phases
 | Type       | Tool       |
