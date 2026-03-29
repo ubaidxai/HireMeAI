@@ -1,4 +1,6 @@
-# apps/webapp/main.py
+import nest_asyncio
+nest_asyncio.apply()
+
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[2]))
@@ -9,7 +11,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from src.agents.runner import run_agent
-from src.metrics.langsmith_metrics import get_langsmith_metrics
+from src.metrics.langsmith_fetcher import get_langsmith_metrics
 from src.metrics.ragas_eval import run_eval
 from src.metrics.store import load_metrics
 

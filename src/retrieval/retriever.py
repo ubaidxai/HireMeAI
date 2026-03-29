@@ -1,6 +1,7 @@
 from openai import AsyncOpenAI
 from qdrant_client import AsyncQdrantClient
 from dotenv import load_dotenv
+import asyncio
 
 load_dotenv()
 
@@ -31,3 +32,14 @@ async def retrieve_chunks(query: str, top_k: int = 5) -> list[dict]:
         }
         for hit in search_result.points 
     ]
+
+
+def retrieve_chunks_sync(query: str) -> list[dict]:
+    try:
+        loop = asyncio.get_event_loop()
+        if loop.is_running():
+            import nest_asyncio
+            nest_asyncio.apply()
+        return loop.run_until_complete(retrieve_chunks(query))
+    except RuntimeError:
+        return asyncio.run(retrieve_chunks(query))

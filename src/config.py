@@ -1,5 +1,5 @@
 from pydantic_settings import BaseSettings
-
+import os
 
 class Settings(BaseSettings):
     # App
@@ -27,10 +27,10 @@ class Settings(BaseSettings):
     qdrant_collection: str = "portfolio"
 
     # Metrics
-    # LangChain
-    langchain_api_key: str
-    langchain_project: str = "HireMeAI"
-    langchain_tracing_v2: bool = True
+    # LangSmith
+    langsmith_api_key: str
+    langsmith_project: str = "HireMeAI"
+    langsmith_tracing_v2: bool = True
 
     metrics_file: str = "data/metrics.json"
 
@@ -41,3 +41,7 @@ class Settings(BaseSettings):
         extra = "ignore"
 
 settings = Settings()
+
+os.environ["LANGSMITH_TRACING"] = "true"
+os.environ["LANGSMITH_API_KEY"] = settings.langsmith_api_key
+os.environ["LANGSMITH_PROJECT"] = settings.langsmith_project
