@@ -26,11 +26,15 @@ class Settings(BaseSettings):
     qdrant_port: int = 6333
     qdrant_collection: str = "portfolio"
 
-    # LangSmith
+    # Metrics
+    # LangChain
     langchain_api_key: str
-    langsmith_project: str = "HireMeAI"
+    langchain_project: str = "HireMeAI"
     langchain_tracing_v2: bool = True
-    langsmith_tracing_url: str = "https://api.smith.langchain.com"
+
+    metrics_file: str = "data/metrics.json"
+
+    eval_model: str = "gpt-4o-mini"
 
     class Config:
         env_file = ".env"
