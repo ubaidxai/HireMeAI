@@ -26,6 +26,12 @@ class Settings(BaseSettings):
     qdrant_port: int = 6333
     qdrant_collection: str = "portfolio"
 
+    # LangSmith
+    langchain_api_key: str
+    langsmith_project: str = "HireMeAI"
+    langchain_tracing_v2: bool = True
+    langsmith_tracing_url: str = "https://api.smith.langchain.com"
+
     class Config:
         env_file = ".env"
         extra = "ignore"
