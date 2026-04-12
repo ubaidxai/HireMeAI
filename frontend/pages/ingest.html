@@ -1,0 +1,175 @@
+<div class="page-header">
+  <div class="page-title">Knowledge Ingestion</div>
+  <div class="page-subtitle">Centralize your career assets. Upload resumes, sync repositories, and index professional profiles into your private HireMeAI vector database.</div>
+</div>
+
+<input type="file" id="file-input" style="display:none" accept=".pdf,.txt,.md,.zip" multiple>
+<input type="file" id="resume-input" style="display:none" accept=".pdf">
+
+<!-- Drop zone -->
+<div id="drop-zone" class="drop-zone" style="margin-bottom:20px">
+  <div class="drop-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/>
+      <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/>
+    </svg>
+  </div>
+  <div class="drop-title">PDF &amp; Rich Documents</div>
+  <div class="drop-sub">Drag and drop your case studies, certifications, or project briefs here.</div>
+  <button class="btn btn-ghost" style="margin-top:4px" onclick="event.stopPropagation();document.getElementById('file-input').click()">Browse Files</button>
+</div>
+
+<!-- Source cards -->
+<div class="ingest-grid">
+  <!-- Resume upload -->
+  <div class="source-card">
+    <div class="source-card-header">
+      <div class="source-icon pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+      </div>
+      <div>
+        <div class="source-card-title">Resume Upload</div>
+        <div class="source-card-sub">Specialized parsing for CVs and Resumes</div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:14px">Automatically extracts skills and experience timelines. Supports PDF and DOCX formats.</p>
+    <button id="resume-upload-btn" class="btn btn-primary" style="width:100%">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/>
+        <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/>
+      </svg>
+      Upload Resume
+    </button>
+  </div>
+
+  <!-- GitHub -->
+  <div class="source-card">
+    <div class="source-card-header">
+      <div class="source-icon github">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/>
+        </svg>
+      </div>
+      <div>
+        <div class="source-card-title">GitHub Integration</div>
+        <div class="source-card-sub">Index repos, READMEs and code</div>
+      </div>
+    </div>
+    <div class="input-group">
+      <input id="github-url" class="input" type="url" placeholder="https://github.com/username/repo">
+      <button id="github-sync-btn" class="btn btn-ghost">Sync</button>
+    </div>
+    <p style="font-size:12px;color:var(--text-muted)">Indexes README, description, topics and languages. Used as a tool in Phase 2 agentic mode.</p>
+  </div>
+
+  <!-- LinkedIn -->
+  <div class="source-card">
+    <div class="source-card-header">
+      <div class="source-icon linkedin">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="source-card-title">LinkedIn Profile</div>
+        <div class="source-card-sub">Sync experience and skills</div>
+      </div>
+    </div>
+    <div class="input-group">
+      <input id="linkedin-url" class="input" type="url" placeholder="linkedin.com/in/username">
+      <button id="linkedin-sync-btn" class="btn btn-ghost">Sync</button>
+    </div>
+    <p style="font-size:12px;color:var(--text-muted)">Or upload your LinkedIn data export ZIP for richer data including recommendations.</p>
+  </div>
+
+  <!-- Other -->
+  <div class="source-card">
+    <div class="source-card-header">
+      <div class="source-icon other">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+        </svg>
+      </div>
+      <div>
+        <div class="source-card-title">Other Resources</div>
+        <div class="source-card-sub">Notion, Text, MD files</div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:14px">Upload any additional context — blog posts, project write-ups, cover letters, or portfolio notes.</p>
+    <button class="btn btn-ghost" style="width:100%" onclick="document.getElementById('file-input').click()">
+      Browse Files
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- Activity table -->
+<div class="activity-card">
+  <div class="activity-header">
+    <div>
+      <div class="activity-title">Recent Activity</div>
+      <div class="activity-sub">Real-time status of your resource synchronization.</div>
+    </div>
+    <a href="#" style="font-size:13px;color:var(--accent);text-decoration:none">View full history →</a>
+  </div>
+  <table class="activity-table">
+    <thead>
+      <tr>
+        <th>Resource name</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Time</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="activity-tbody">
+      <tr>
+        <td>
+          <div class="file-name-cell">
+            <div class="file-type-icon" style="background:var(--accent-2-dim);color:var(--accent-2)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <span style="color:var(--text-primary);font-weight:500">Portfolio_Source_Repo</span>
+          </div>
+        </td>
+        <td><span class="badge badge-purple">GitHub</span></td>
+        <td><span class="badge badge-green">● Indexed</span></td>
+        <td class="mono" style="font-size:11px;color:var(--text-muted)">45 mins ago</td>
+        <td><button class="action-link resync-btn" data-source="Portfolio_Source_Repo">Re-sync</button></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="file-name-cell">
+            <div class="file-type-icon" style="background:var(--amber-dim);color:var(--amber)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/></svg>
+            </div>
+            <span style="color:var(--text-primary);font-weight:500">LinkedIn_Archive_Data.zip</span>
+          </div>
+        </td>
+        <td><span class="badge badge-amber">Archive</span></td>
+        <td><span class="badge badge-red">● Failed</span></td>
+        <td class="mono" style="font-size:11px;color:var(--text-muted)">2 hours ago</td>
+        <td><button class="action-link retry-btn" style="color:var(--red)">Retry</button></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="file-name-cell">
+            <div class="file-type-icon" style="background:var(--red-dim);color:var(--red)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <span style="color:var(--text-primary);font-weight:500">resume.pdf</span>
+          </div>
+        </td>
+        <td><span class="badge badge-purple">Resume</span></td>
+        <td><span class="badge badge-green">● Indexed</span></td>
+        <td class="mono" style="font-size:11px;color:var(--text-muted)">Yesterday</td>
+        <td><button class="action-link resync-btn" data-source="resume.pdf">Re-sync</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

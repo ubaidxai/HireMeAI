@@ -1,4 +1,4 @@
-from src.config import settings
+from src.settings import settings
 from pathlib import Path
 import json 
 from datetime import datetime

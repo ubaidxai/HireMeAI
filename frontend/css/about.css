@@ -1,0 +1,183 @@
+/* ── About layout ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* ── Stack table ── */
+.stack-table { width: 100%; border-collapse: collapse; }
+
+.stack-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.stack-table tr:last-child td { border-bottom: none; }
+.stack-table tr:hover td { background: var(--bg-hover); }
+
+.stack-layer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  min-width: 110px;
+}
+
+.stack-tool { font-weight: 600; color: var(--text-primary); }
+.stack-note { font-size: 12px; color: var(--text-secondary); margin-top: 1px; }
+
+/* ── API reference ── */
+.api-section { margin-bottom: 20px; }
+
+.api-endpoint {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 8px;
+  transition: border-color var(--transition);
+}
+
+.api-endpoint:hover { border-color: var(--border-light); }
+
+.method-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 3px 7px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.method-post { background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent-glow); }
+.method-get  { background: var(--accent-2-dim); color: var(--accent-2); border: 1px solid #00d4aa33; }
+
+.api-path {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.api-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 3px;
+}
+
+/* ── Code block ── */
+.code-block {
+  background: var(--bg-base);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  overflow-x: auto;
+  margin-bottom: 12px;
+}
+
+.code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.code-lang {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.copy-btn:hover { color: var(--text-secondary); }
+.copy-btn svg { width: 12px; height: 12px; }
+
+pre {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+pre .key   { color: var(--accent); }
+pre .str   { color: var(--accent-2); }
+pre .num   { color: var(--amber); }
+pre .kw    { color: var(--text-primary); }
+
+/* ── Phase roadmap ── */
+.phase-list { display: flex; flex-direction: column; gap: 0; }
+
+.phase-item {
+  display: flex;
+  gap: 16px;
+  padding: 14px 0;
+  position: relative;
+}
+
+.phase-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 46px;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.phase-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.phase-dot.done    { background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent-glow); }
+.phase-dot.current { background: var(--accent); color: #fff; box-shadow: 0 0 16px var(--accent-glow); }
+.phase-dot.future  { background: var(--bg-hover); color: var(--text-muted); border: 1px solid var(--border); }
+
+.phase-content { flex: 1; padding-top: 4px; }
+.phase-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.phase-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+
+.phase-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+
+.phase-tag {
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+}

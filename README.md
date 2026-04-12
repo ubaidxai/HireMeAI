@@ -185,7 +185,7 @@ uv run main.py
 ### API
  
 ```bash
-uvicorn apps.api.main:app --reload
+uvicorn api.main:app --reload
 ```
  
 API available at [http://localhost:8000](http://localhost:8000)

@@ -1,0 +1,208 @@
+<div class="page-header">
+  <div class="page-title">About &amp; Docs</div>
+  <div class="page-subtitle">System overview, API reference, and project roadmap.</div>
+</div>
+
+<div class="about-grid">
+  <!-- Tech stack -->
+  <div class="card">
+    <div style="font-size:14px;font-weight:700;margin-bottom:14px">Tech Stack</div>
+    <table class="stack-table">
+      <tr>
+        <td class="stack-layer">Agent</td>
+        <td><div class="stack-tool">LangGraph</div><div class="stack-note">Stateful graph-based agent loops</div></td>
+      </tr>
+      <tr>
+        <td class="stack-layer">Vector DB</td>
+        <td><div class="stack-tool">Qdrant</div><div class="stack-note">Self-hosted, hybrid search</div></td>
+      </tr>
+      <tr>
+        <td class="stack-layer">Embeddings</td>
+        <td><div class="stack-tool">text-embedding-3-small</div><div class="stack-note">OpenAI, 1536 dims</div></td>
+      </tr>
+      <tr>
+        <td class="stack-layer">LLM</td>
+        <td><div class="stack-tool">gpt-4o-mini</div><div class="stack-note">Model-agnostic via LangChain</div></td>
+      </tr>
+      <tr>
+        <td class="stack-layer">API</td>
+        <td><div class="stack-tool">FastAPI</div><div class="stack-note">Async, Pydantic-typed</div></td>
+      </tr>
+      <tr>
+        <td class="stack-layer">Tracing</td>
+        <td><div class="stack-tool">LangSmith</div><div class="stack-note">Latency, tokens, cost</div></td>
+      </tr>
+      <tr>
+        <td class="stack-layer">Evals</td>
+        <td><div class="stack-tool">RAGAS</div><div class="stack-note">Faithfulness, relevancy, recall</div></td>
+      </tr>
+      <tr>
+        <td class="stack-layer">Packaging</td>
+        <td><div class="stack-tool">uv + Docker Compose</div><div class="stack-note">Containerized full stack</div></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Build phases -->
+  <div class="card">
+    <div style="font-size:14px;font-weight:700;margin-bottom:14px">Build Roadmap</div>
+    <div class="phase-list">
+      <div class="phase-item">
+        <div class="phase-dot done">✓</div>
+        <div class="phase-content">
+          <div class="phase-name">Phase 1 — Core</div>
+          <div class="phase-desc">PDF ingestion → chunks → embeddings → Qdrant → RAG query → FastAPI → Streamlit</div>
+          <div class="phase-tags">
+            <span class="phase-tag">PDF parsing</span>
+            <span class="phase-tag">Qdrant</span>
+            <span class="phase-tag">FastAPI</span>
+            <span class="phase-tag">LangGraph</span>
+          </div>
+        </div>
+      </div>
+      <div class="phase-item">
+        <div class="phase-dot current">2</div>
+        <div class="phase-content">
+          <div class="phase-name" style="color:var(--accent)">Phase 2 — Quality <span class="badge badge-purple" style="margin-left:6px">Current</span></div>
+          <div class="phase-desc">Smart chunking · metadata enrichment · all data sources · reranker · RAGAS golden dataset · React frontend</div>
+          <div class="phase-tags">
+            <span class="phase-tag">Section chunking</span>
+            <span class="phase-tag">LinkedIn</span>
+            <span class="phase-tag">GitHub</span>
+            <span class="phase-tag">RAGAS</span>
+          </div>
+        </div>
+      </div>
+      <div class="phase-item">
+        <div class="phase-dot future">3</div>
+        <div class="phase-content">
+          <div class="phase-name" style="color:var(--text-secondary)">Phase 3 — Production</div>
+          <div class="phase-desc">Hybrid retrieval · Redis semantic cache · incremental updates · multi-tenancy</div>
+          <div class="phase-tags">
+            <span class="phase-tag">BM25 + dense</span>
+            <span class="phase-tag">Redis</span>
+            <span class="phase-tag">multi-tenant</span>
+          </div>
+        </div>
+      </div>
+      <div class="phase-item">
+        <div class="phase-dot future">4</div>
+        <div class="phase-content">
+          <div class="phase-name" style="color:var(--text-secondary)">Phase 4 — Agentic</div>
+          <div class="phase-desc">Tool use · guardrails · conversation memory · ReAct loops</div>
+          <div class="phase-tags">
+            <span class="phase-tag">Tools</span>
+            <span class="phase-tag">NeMo guardrails</span>
+            <span class="phase-tag">Memory</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- API Reference -->
+<div class="card" style="margin-bottom:16px">
+  <div style="font-size:14px;font-weight:700;margin-bottom:16px">API Reference</div>
+
+  <div class="api-endpoint">
+    <span class="method-badge method-post">POST</span>
+    <div>
+      <div class="api-path">/chat</div>
+      <div class="api-desc">Send a user message and receive an AI response with optional source citations.</div>
+    </div>
+  </div>
+
+  <div class="api-endpoint">
+    <span class="method-badge method-post">POST</span>
+    <div>
+      <div class="api-path">/ingest/upload</div>
+      <div class="api-desc">Upload a PDF or document file for chunking, embedding, and Qdrant indexing.</div>
+    </div>
+  </div>
+
+  <div class="api-endpoint">
+    <span class="method-badge method-post">POST</span>
+    <div>
+      <div class="api-path">/ingest/github</div>
+      <div class="api-desc">Index a GitHub repository by URL. Extracts README, description, and topics.</div>
+    </div>
+  </div>
+
+  <div class="api-endpoint">
+    <span class="method-badge method-post">POST</span>
+    <div>
+      <div class="api-path">/ingest/linkedin</div>
+      <div class="api-desc">Sync a LinkedIn profile URL or parse an uploaded data export ZIP.</div>
+    </div>
+  </div>
+
+  <div class="api-endpoint">
+    <span class="method-badge method-get">GET</span>
+    <div>
+      <div class="api-path">/metrics/langsmith</div>
+      <div class="api-desc">Returns recent run traces with latency, token usage, and cost data from LangSmith.</div>
+    </div>
+  </div>
+
+  <div class="api-endpoint">
+    <span class="method-badge method-get">GET</span>
+    <div>
+      <div class="api-path">/metrics/ragas</div>
+      <div class="api-desc">Returns RAGAS eval scores (faithfulness, answer_relevancy, context_recall) from local store.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Chat payload example -->
+<div class="card">
+  <div style="font-size:14px;font-weight:700;margin-bottom:16px">Request / Response Shapes</div>
+
+  <div class="code-block">
+    <div class="code-block-header">
+      <span class="code-lang">POST /chat — request</span>
+      <button class="copy-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy
+      </button>
+    </div>
+    <pre>{ <span class="key">"message"</span>: <span class="str">"What are Ubaid's core skills?"</span> }</pre>
+  </div>
+
+  <div class="code-block">
+    <div class="code-block-header">
+      <span class="code-lang">POST /chat — response</span>
+      <button class="copy-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy
+      </button>
+    </div>
+    <pre>{
+  <span class="key">"response"</span>: <span class="str">"Ubaid's core skills include Python, FastAPI, LangGraph..."</span>,
+  <span class="key">"sources"</span>: [<span class="str">"resume.pdf"</span>, <span class="str">"linkedin_export"</span>]
+}</pre>
+  </div>
+
+  <div class="code-block">
+    <div class="code-block-header">
+      <span class="code-lang">GET /metrics/langsmith — response</span>
+      <button class="copy-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy
+      </button>
+    </div>
+    <pre>{
+  <span class="key">"avg_latency"</span>: <span class="num">2.34</span>,
+  <span class="key">"avg_tokens"</span>: <span class="num">612</span>,
+  <span class="key">"total_cost"</span>: <span class="num">0.0042</span>,
+  <span class="key">"latency_breakdown"</span>: {
+    <span class="key">"embedding"</span>: <span class="num">142</span>,
+    <span class="key">"llm"</span>: <span class="num">890</span>,
+    <span class="key">"reranking"</span>: <span class="num">210</span>
+  },
+  <span class="key">"runs"</span>: [
+    { <span class="key">"timestamp"</span>: <span class="str">"2025-04-10T14:22:00Z"</span>, <span class="key">"latency_sec"</span>: <span class="num">2.1</span>, <span class="key">"total_tokens"</span>: <span class="num">580</span>, <span class="key">"cost_usd"</span>: <span class="num">0.00021</span> }
+  ]
+}</pre>
+  </div>
+</div>

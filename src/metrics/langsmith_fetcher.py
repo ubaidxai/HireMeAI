@@ -1,6 +1,6 @@
 # src/metrics/langsmith_fetcher.py
 import requests
-from src.config import settings
+from src.settings import settings
 
 BASE_URL = "https://api.smith.langchain.com/api/v1"
 

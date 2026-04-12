@@ -1,8 +1,8 @@
 from src.ingestion.embeddings.engine import embed_and_store
-from src.ingestion.collectors.resume import extract_text_from_pdf
+from utils.extract_pdf import extract_text_from_pdf
 import asyncio
 from src.retrieval.retriever import retrieve_chunks
-from src.ingestion.collectors.resume import extract_text_from_pdf
+from utils.extract_pdf import extract_text_from_pdf
 
 PDF_PATH = r"/home/gokburo09/github/HireMeAI/data/resume.pdf"
 
@@ -30,6 +30,6 @@ def run_agent():
 
 
 if __name__ == "__main__":
-    # run_ingestion()
+    run_ingestion()
     # run_retrieval()
-    run_agent()
+    # run_agent()

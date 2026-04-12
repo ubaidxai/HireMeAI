@@ -20,6 +20,8 @@ class Settings(BaseSettings):
     openai_model: str = "gpt-4o-mini"
     openai_embedding_model: str = "text-embedding-3-small"
     openai_embedding_dim: int = 1536
+    max_retries: int = 2
+    timeout: float = 30.0
 
     # Qdrant
     qdrant_host: str = "localhost"

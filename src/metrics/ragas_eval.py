@@ -8,7 +8,7 @@ from datasets import Dataset
 from src.retrieval.retriever import retrieve_chunks_sync
 from src.agents.runner import run_agent
 from src.metrics.store import save_metrics
-from src.config import settings
+from src.settings import settings
 
 evaluator_llm = LangchainLLMWrapper(ChatOpenAI(model=settings.openai_model))
 evaluator_embeddings = LangchainEmbeddingsWrapper(OpenAIEmbeddings(model=settings.openai_embedding_model))
