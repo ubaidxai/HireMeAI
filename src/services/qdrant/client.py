@@ -1,15 +1,18 @@
 from qdrant_client import AsyncQdrantClient
 from qdrant_client.models import Distance, VectorParams
+from src.settings import settings
 
+COLLECTION_NAME = settings.qdrant_collection
+EMBEDDING_DIM   = settings.qdrant_embeddings_dim
 
-COLLECTION_NAME = "portfolio"
-EMBEDDING_DIM   = 1536
-
-qdrant_client = AsyncQdrantClient(host="localhost", port=6333)
+qdrant_client = AsyncQdrantClient(
+    host=settings.qdrant_host, 
+    port=settings.qdrant_port
+    )
 
 async def ensure_collection():
     existing_collections = [c.name for c in (await qdrant_client.get_collections()).collections]
-    if COLLECTION_NAME not in existing_collections:
+    if settings.COLLECTION_NAME not in existing_collections:
         print(f"Creating collection '{COLLECTION_NAME}'...")
         await qdrant_client.create_collection( #recreate_collection
             collection_name=COLLECTION_NAME,

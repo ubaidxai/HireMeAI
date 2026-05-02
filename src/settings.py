@@ -27,6 +27,7 @@ class Settings(BaseSettings):
     qdrant_host: str = "localhost"
     qdrant_port: int = 6333
     qdrant_collection: str = "portfolio"
+    qdrant_embeddings_dim: int = 1536
 
     # Metrics
     # LangSmith

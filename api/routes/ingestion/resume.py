@@ -5,8 +5,8 @@ from src.ingestion.services.resume_ingestion import run_ingestion
 router = APIRouter()
 
 @router.post("/resume", response_model=IngestionResponse)
-def ingest_resume(file: UploadFile = File(...)):
-    run_ingestion(file.file)
+async def ingest_resume(file: UploadFile = File(...)):
+    await run_ingestion(file.file)
 
     return IngestionResponse(
         status="success",
