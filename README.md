@@ -304,3 +304,8 @@ OBSERVABILITY:
 - OpenTelemetry
 - Prometheus + Grafana
 - Structured logs (JSON)
+
+
+
+uv add playwright
+uv run playwright install

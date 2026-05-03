@@ -1,0 +1,55 @@
+────────────────────────────────────────────────────────────
+CHUNK 000 | section=intro | words=21 | id=55f4d1e514ef
+────────────────────────────────────────────────────────────
+Neural Interface Active — Welcome is an cutting-edge technologies to build scalable, intelligent solutions that automate workflows and integrate AI into
+
+────────────────────────────────────────────────────────────
+CHUNK 001 | section=skills | words=19 | id=9df08fe4e123
+────────────────────────────────────────────────────────────
+Technical skills — Languages & Frameworks: Python, Expert, FastAPI, Django, Advanced, Flask, Proficient, SQL, HTML, CSS, JavaScript, C, Familiar.
+
+────────────────────────────────────────────────────────────
+CHUNK 002 | section=skills | words=19 | id=2b00d138e23a
+────────────────────────────────────────────────────────────
+Technical skills — Agentic AI & LLMs: LangChain, Expert, LangGraph, Production RAG, OpenAI Agents SDK, MCP, Advanced, Claude Code.
+
+────────────────────────────────────────────────────────────
+CHUNK 003 | section=skills | words=20 | id=89a474cc64cb
+────────────────────────────────────────────────────────────
+Technical skills — Machine Learning & Deep Learning: Scikit-learn, Expert, Neural Networks, Advanced, TensorFlow, OpenCV, OCR & NLP, YOLOv8, Proficient.
+
+────────────────────────────────────────────────────────────
+CHUNK 004 | section=skills | words=18 | id=8c24dd3948da
+────────────────────────────────────────────────────────────
+Technical skills — Cloud, DevOps & Infrastructure: Docker, Expert, PostgreSQL, Redis, Advanced, Git, ELK APM, AWS, Proficient, RabbitMQ.
+
+────────────────────────────────────────────────────────────
+CHUNK 005 | section=experience | words=118 | id=3dbe45ba7ec7
+────────────────────────────────────────────────────────────
+Work experience: Data Scientist at Bykea (Feb 2025 to Current, Karachi, Pakistan). Key achievements: Developed and deployed a scalable ML-based Surge Pricing framework comprising In-depth data preprocessing, multiple tree-based models, and hyperparameter tuning, boosting prediction accuracy to about 90%. This data-driven solution increased daily Net Booking Value (NBV) by 1–2%. Designed and optimized REST APIs using FastAPI framework to deliver models in production, reducing average latency to within 10 ms. Also, Integrated ELK logging for real-time monitoring and immediate error resolution, maintaining a ~0% API error rate under peak loads. Trained object detection models and applied OCR for customer oboarding documents to decreased the onboarding time 60-70%. Developed customer support ReAct conversational chatbot to resolve customer queries 4x-faster.
+
+────────────────────────────────────────────────────────────
+CHUNK 006 | section=experience | words=145 | id=82869156e32c
+────────────────────────────────────────────────────────────
+Work experience: Associate AI Engineer at HashMove (Jan 2024 to Feb 2025, Karachi, Pakistan). Key achievements: Developed a robust document extraction system utilizing advanced tools such as PaddleOCR, OpenAI models, fuzzy algorithms, pattern matching, and OpenCV for comprehensive document preprocessing, achieving over 95% accuracy in extracting text from diverse shipping documents. Engineered a Retrieval-Augmented Generation (RAG) pipeline chatbot using Langchain and OpenAI API, delivering contextual customer support by integrating with Vector and SQL databases, reducing customer query calls by 60% and improving response time by 30%. Designed and deployed Django applications, implementing over 10+ Django Rest Framework (DRF) APIs and deploying them to Microsoft IIS Server to ensure seamless integration with the product and scalable solutions. Led proof-of-concept initiatives for optimizing route planning, distribution center operations, and demand forecasting by leveraging statistical and mathematical modeling, and AI-driven approaches to enhance operational efficiency and forecasting accuracy.
+
+────────────────────────────────────────────────────────────
+CHUNK 007 | section=projects | words=64 | id=ceee78cf7296
+────────────────────────────────────────────────────────────
+Project: Portfolio. Agentic Trading Simulator is a multi-agent AI system that simulates equity trading with autonomous traders and researcher agents that uses multiple MCP servers and tools. Technologies: Projects, Production RAG, Code, HireMeAI, LangGraph, FastAPI, Docling, Qdrant, OpenSearch, OpenAI, Agentic AI, Deep Research Engine, OpenAI Agents SDK, Tavily API, Gemini, Tool Calling, Agentic Trading Simulator, MCP Servers, PlayWright, LIBSQL, Multi Model, WSL, More Projects.
+
+────────────────────────────────────────────────────────────
+CHUNK 008 | section=education | words=16 | id=ea2d4bcc0db8
+────────────────────────────────────────────────────────────
+Education: MSc. Applied Mathematics from University of Karachi (Jan 2023 to Dec 2023). 🥇 Gold Medalist.
+
+────────────────────────────────────────────────────────────
+CHUNK 009 | section=education | words=13 | id=524f7f0b1f17
+────────────────────────────────────────────────────────────
+Education: BSc. (Honors) Mathematics from University of Karachi (Jan 2020 to Dec 2022).
+
+────────────────────────────────────────────────────────────
+CHUNK 010 | section=contact | words=8 | id=1c24a3cca89a
+────────────────────────────────────────────────────────────
+Contact information. Email: ubaidalikhan247@gmail.com. Phone: +92-315-6447006. Location: Karachi.
+

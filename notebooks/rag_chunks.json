@@ -1,0 +1,224 @@
+[
+  {
+    "chunk_id": "55f4d1e514ef",
+    "text": "Neural Interface Active — Welcome is an cutting-edge technologies to build scalable, intelligent solutions that automate workflows and integrate AI into",
+    "section": "intro",
+    "source_url": "https://ubaid-portfolio-pi.vercel.app",
+    "chunk_index": 0,
+    "word_count": 21,
+    "metadata": {
+      "name": "Neural Interface Active — Welcome",
+      "domain": "ubaid-portfolio-pi.vercel.app"
+    }
+  },
+  {
+    "chunk_id": "9df08fe4e123",
+    "text": "Technical skills — Languages & Frameworks: Python, Expert, FastAPI, Django, Advanced, Flask, Proficient, SQL, HTML, CSS, JavaScript, C, Familiar.",
+    "section": "skills",
+    "source_url": "https://ubaid-portfolio-pi.vercel.app",
+    "chunk_index": 1,
+    "word_count": 19,
+    "metadata": {
+      "category": "Languages & Frameworks",
+      "skills": [
+        "Python",
+        "Expert",
+        "FastAPI",
+        "Django",
+        "Advanced",
+        "Flask",
+        "Proficient",
+        "SQL",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "C",
+        "Familiar"
+      ],
+      "domain": "ubaid-portfolio-pi.vercel.app"
+    }
+  },
+  {
+    "chunk_id": "2b00d138e23a",
+    "text": "Technical skills — Agentic AI & LLMs: LangChain, Expert, LangGraph, Production RAG, OpenAI Agents SDK, MCP, Advanced, Claude Code.",
+    "section": "skills",
+    "source_url": "https://ubaid-portfolio-pi.vercel.app",
+    "chunk_index": 2,
+    "word_count": 19,
+    "metadata": {
+      "category": "Agentic AI & LLMs",
+      "skills": [
+        "LangChain",
+        "Expert",
+        "LangGraph",
+        "Production RAG",
+        "OpenAI Agents SDK",
+        "MCP",
+        "Advanced",
+        "Claude Code"
+      ],
+      "domain": "ubaid-portfolio-pi.vercel.app"
+    }
+  },
+  {
+    "chunk_id": "89a474cc64cb",
+    "text": "Technical skills — Machine Learning & Deep Learning: Scikit-learn, Expert, Neural Networks, Advanced, TensorFlow, OpenCV, OCR & NLP, YOLOv8, Proficient.",
+    "section": "skills",
+    "source_url": "https://ubaid-portfolio-pi.vercel.app",
+    "chunk_index": 3,
+    "word_count": 20,
+    "metadata": {
+      "category": "Machine Learning & Deep Learning",
+      "skills": [
+        "Scikit-learn",
+        "Expert",
+        "Neural Networks",
+        "Advanced",
+        "TensorFlow",
+        "OpenCV",
+        "OCR & NLP",
+        "YOLOv8",
+        "Proficient"
+      ],
+      "domain": "ubaid-portfolio-pi.vercel.app"
+    }
+  },
+  {
+    "chunk_id": "8c24dd3948da",
+    "text": "Technical skills — Cloud, DevOps & Infrastructure: Docker, Expert, PostgreSQL, Redis, Advanced, Git, ELK APM, AWS, Proficient, RabbitMQ.",
+    "section": "skills",
+    "source_url": "https://ubaid-portfolio-pi.vercel.app",
+    "chunk_index": 4,
+    "word_count": 18,
+    "metadata": {
+      "category": "Cloud, DevOps & Infrastructure",
+      "skills": [
+        "Docker",
+        "Expert",
+        "PostgreSQL",
+        "Redis",
+        "Advanced",
+        "Git",
+        "ELK APM",
+        "AWS",
+        "Proficient",
+        "RabbitMQ"
+      ],
+      "domain": "ubaid-portfolio-pi.vercel.app"
+    }
+  },
+  {
+    "chunk_id": "3dbe45ba7ec7",
+    "text": "Work experience: Data Scientist at Bykea (Feb 2025 to Current, Karachi, Pakistan). Key achievements: Developed and deployed a scalable ML-based Surge Pricing framework comprising In-depth data preprocessing, multiple tree-based models, and hyperparameter tuning, boosting prediction accuracy to about 90%. This data-driven solution increased daily Net Booking Value (NBV) by 1–2%. Designed and optimized REST APIs using FastAPI framework to deliver models in production, reducing average latency to within 10 ms. Also, Integrated ELK logging for real-time monitoring and immediate error resolution, maintaining a ~0% API error rate under peak loads. Trained object detection models and applied OCR for customer oboarding documents to decreased the onboarding time 60-70%. Developed customer support ReAct conversational chatbot to resolve customer queries 4x-faster.",
+    "section": "experience",
+    "source_url": "https://ubaid-portfolio-pi.vercel.app",
+    "chunk_index": 5,
+    "word_count": 118,
+    "metadata": {
+      "role": "Data Scientist",
+      "company": "Bykea",
+      "dates": "Feb 2025 to Current",
+      "location": "Karachi, Pakistan",
+      "domain": "ubaid-portfolio-pi.vercel.app"
+    }
+  },
+  {
+    "chunk_id": "82869156e32c",
+    "text": "Work experience: Associate AI Engineer at HashMove (Jan 2024 to Feb 2025, Karachi, Pakistan). Key achievements: Developed a robust document extraction system utilizing advanced tools such as PaddleOCR, OpenAI models, fuzzy algorithms, pattern matching, and OpenCV for comprehensive document preprocessing, achieving over 95% accuracy in extracting text from diverse shipping documents. Engineered a Retrieval-Augmented Generation (RAG) pipeline chatbot using Langchain and OpenAI API, delivering contextual customer support by integrating with Vector and SQL databases, reducing customer query calls by 60% and improving response time by 30%. Designed and deployed Django applications, implementing over 10+ Django Rest Framework (DRF) APIs and deploying them to Microsoft IIS Server to ensure seamless integration with the product and scalable solutions. Led proof-of-concept initiatives for optimizing route planning, distribution center operations, and demand forecasting by leveraging statistical and mathematical modeling, and AI-driven approaches to enhance operational efficiency and forecasting accuracy.",
+    "section": "experience",
+    "source_url": "https://ubaid-portfolio-pi.vercel.app",
+    "chunk_index": 6,
+    "word_count": 145,
+    "metadata": {
+      "role": "Associate AI Engineer",
+      "company": "HashMove",
+      "dates": "Jan 2024 to Feb 2025",
+      "location": "Karachi, Pakistan",
+      "domain": "ubaid-portfolio-pi.vercel.app"
+    }
+  },
+  {
+    "chunk_id": "ceee78cf7296",
+    "text": "Project: Portfolio. Agentic Trading Simulator is a multi-agent AI system that simulates equity trading with autonomous traders and researcher agents that uses multiple MCP servers and tools. Technologies: Projects, Production RAG, Code, HireMeAI, LangGraph, FastAPI, Docling, Qdrant, OpenSearch, OpenAI, Agentic AI, Deep Research Engine, OpenAI Agents SDK, Tavily API, Gemini, Tool Calling, Agentic Trading Simulator, MCP Servers, PlayWright, LIBSQL, Multi Model, WSL, More Projects.",
+    "section": "projects",
+    "source_url": "https://ubaid-portfolio-pi.vercel.app",
+    "chunk_index": 7,
+    "word_count": 64,
+    "metadata": {
+      "project": "Portfolio",
+      "technologies": [
+        "Projects",
+        "Production RAG",
+        "Code",
+        "HireMeAI",
+        "Production RAG",
+        "LangGraph",
+        "FastAPI",
+        "Docling",
+        "Qdrant",
+        "OpenSearch",
+        "OpenAI",
+        "Agentic AI",
+        "Code",
+        "Deep Research Engine",
+        "Agentic AI",
+        "OpenAI Agents SDK",
+        "Tavily API",
+        "Gemini",
+        "Tool Calling",
+        "Agentic AI",
+        "Code",
+        "Agentic Trading Simulator",
+        "Agentic AI",
+        "OpenAI Agents SDK",
+        "MCP Servers",
+        "PlayWright",
+        "LIBSQL",
+        "Multi Model",
+        "WSL",
+        "More Projects"
+      ],
+      "domain": "ubaid-portfolio-pi.vercel.app"
+    }
+  },
+  {
+    "chunk_id": "ea2d4bcc0db8",
+    "text": "Education: MSc. Applied Mathematics from University of Karachi (Jan 2023 to Dec 2023). 🥇 Gold Medalist.",
+    "section": "education",
+    "source_url": "https://ubaid-portfolio-pi.vercel.app",
+    "chunk_index": 8,
+    "word_count": 16,
+    "metadata": {
+      "degree": "MSc. Applied Mathematics",
+      "institution": "University of Karachi",
+      "domain": "ubaid-portfolio-pi.vercel.app"
+    }
+  },
+  {
+    "chunk_id": "524f7f0b1f17",
+    "text": "Education: BSc. (Honors) Mathematics from University of Karachi (Jan 2020 to Dec 2022).",
+    "section": "education",
+    "source_url": "https://ubaid-portfolio-pi.vercel.app",
+    "chunk_index": 9,
+    "word_count": 13,
+    "metadata": {
+      "degree": "BSc. (Honors) Mathematics",
+      "institution": "University of Karachi",
+      "domain": "ubaid-portfolio-pi.vercel.app"
+    }
+  },
+  {
+    "chunk_id": "1c24a3cca89a",
+    "text": "Contact information. Email: ubaidalikhan247@gmail.com. Phone: +92-315-6447006. Location: Karachi.",
+    "section": "contact",
+    "source_url": "https://ubaid-portfolio-pi.vercel.app",
+    "chunk_index": 10,
+    "word_count": 8,
+    "metadata": {
+      "email": "ubaidalikhan247@gmail.com",
+      "phone": "+92-315-6447006",
+      "linkedin": "",
+      "domain": "ubaid-portfolio-pi.vercel.app"
+    }
+  }
+]
